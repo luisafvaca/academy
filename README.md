@@ -237,4 +237,27 @@ Este es un metodo simplificado de javascript para extraer multiples propiedades 
 
     console.log(animals); //["🦊","🐰","🐷","🐼","🐸","🐥","🐨","🦁","🐰"]
 ```
+## Referencia.
+Cuando pasamos un argumento a un funcion o asignamos un valor primitivo (null, boolean, undefined, number, string, symbol) a una variable, este proceso siempre lo hará *"por valor"*, es decir que este tipo de elemento será copiado. Cuando nos referimos aun valor no primitivo (Object, Array, Function) javascript hace una copia de la referencia, esto quiere decir que tenemos un puntero por el cual podemos acceder al valor original
+
+```javascript 
+    const tree = {
+        type: "apple tree 🍎";
+    };
+
+    const otherTree = tree;
+
+    tree.type = "orange tree 🍊";
+
+    console.log(otherTree) //"orange tree 🍊"
+```
+
+- referencias circulares, son aquellas en las que un objecto contiene una referencia así mismo.
+```javascript
+    const a = [1, 2, 3];
+    a.push(a);
+    console.log(a); //[1,2,3,[1,2,3]]
+```
+
+
 
