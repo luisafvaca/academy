@@ -190,3 +190,12 @@ Es una forma de recibir multiples argumentos en llamadas a funciones o multiples
     var animals = ["🦊","🐰","🐷",...insects,"🐼","🐸","🐥","🐨","🦁","🐰"];
     console.log(animals); //["🦊", "🐰", "🐷", "🐛", "🐝", "🐞", "🐼", "🐸", "🐥", "🐨", "🦁", "🐰"]
 ```
+- Spread en objetos
+```javascript
+    var insects = { insects: ["🐛","🐝","🐞"]};
+    var object= {
+        ...insects,
+        animals: ["🦊","🐰","🐷","🐼","🐸","🐥","🐨","🦁","🐰"]
+    }
+    console.log(object); //{insects: Array(3), animals: Array(9)}
+```
