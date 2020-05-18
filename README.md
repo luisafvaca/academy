@@ -199,3 +199,42 @@ Es una forma de recibir multiples argumentos en llamadas a funciones o multiples
     }
     console.log(object); //{insects: Array(3), animals: Array(9)}
 ```
+## Destructuring
+Este es un metodo simplificado de javascript para extraer multiples propiedades de un arreglo o un objeto, es llamado desconstrucción y usa una sintaxis similar al a de los arrys literales o objetos.
+
+- destructuring con Arreglos
+```javascript
+    var animals = ["🦊","🐰","🐷","🐼","🐸","🐥","🐨","🦁","🐰"];
+    var [animal1, animal2, animal3] = animals;
+    console.log(animal1); //🦊
+    console.log(animal2); //🐰
+    console.log(animal3); //🐷
+```
+- destructuring con Arreglos y valores por defecto;
+```javascript
+    var animals = ["🦊","🐰"];
+    var [animal1, animal2, animal3 = "🐥"] = animals;
+    console.log(animal1); //🦊
+    console.log(animal2); //🐰
+    console.log(animal3); //🐥
+```
+
+- destructuring con Arreglos e ignorar elementos;
+```javascript
+    var animals = ["🦊","🐰", "🐥"];
+    var [animal1, , animal3] = animals;
+    console.log(animal1); //🦊
+    console.log(animal3); //🐥
+```
+- destructuring con Objetos
+```javascript
+    var jungle = {
+        animals: ["🦊","🐰","🐷","🐼","🐸","🐥","🐨","🦁","🐰"],
+        insects: ["🐛","🐝","🐞"]
+    }
+
+    var { animals } = jungle;
+
+    console.log(animals); //["🦊","🐰","🐷","🐼","🐸","🐥","🐨","🦁","🐰"]
+```
+
